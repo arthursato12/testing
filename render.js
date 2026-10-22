@@ -8,5 +8,5 @@ export function renderIndex() {
 export function renderArticle(slug) {
   const article = articles.find((a) => a.slug === slug);
   if (!article) return null;
-  return `<article><h1>${article.title}</h1><p>${article.body}</p></article>`;
+  return `<article><h1>${article.title}</h1><p class="author">${article.authorName}</p><p>${article.body}</p></article>`;
 }
