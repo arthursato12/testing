@@ -1,6 +1,6 @@
 import { articles } from "./articles.js";
 
-// Pending confirmation of the site's official zone; change only this constant.
+// The site's official time zone (confirmed by Arthur, 2026-10-21).
 export const SITE_TIME_ZONE = "America/New_York";
 
 export function formatPublishDate(iso) {
