@@ -14,9 +14,11 @@ test("article page shows title and body", () => {
   assert.match(html, /What we heard on the floor/);
 });
 
-test("every article page shows its author's name", () => {
+test("every article page shows its author as 'By name, title' under the heading", () => {
   for (const a of articles) {
-    assert.match(renderArticle(a.slug), new RegExp(a.authorName));
+    assert.ok(
+      renderArticle(a.slug).includes(`</h1><p class="author">By ${a.authorName}, ${a.authorTitle}</p>`)
+    );
   }
 });
 
